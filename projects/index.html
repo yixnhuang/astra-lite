@@ -1,44 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Selected projects by Your Name.">
-  <link rel="icon" href="data:,">
-  <title>Projects | Your Name</title>
-  <link rel="stylesheet" href="/assets/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<title>Projects | Your Name</title>
+	<meta name="description" content="Selected research and technical projects by Your Name.">
+	<link rel="icon" href="data:,">
+	<script src="/assets/js/theme.js"></script>
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" href="/assets/css/responsive.css">
 </head>
+
 <body>
-  <main>
-    <header class="page-header">
-      <p><a href="/">← Home</a></p>
-      <h1>Projects</h1>
-      <p class="lead">Selected work across your research and technical interests.</p>
-    </header>
+	<main class="page-content">
+		<section class="projects" aria-labelledby="projects-title">
+			<h1 id="projects-title" class="title">Projects</h1>
+			<p class="section-note">Selected research, engineering, and open-source work.</p>
+			<div class="project-groups" aria-label="Projects grouped by area">
+				<section class="project-group" aria-labelledby="research-projects">
+					<h2 id="research-projects">Research Projects</h2>
+					<div class="entry-list">
+						<article class="entry-item">
+							<div class="entry-media entry-media--image"><img class="entry-image" src="/assets/images/project.svg" alt="Research project preview" width="960" height="540"></div>
+							<div class="entry-content">
+								<p class="entry-title">Research Project Title</p>
+								<p class="entry-time"><time datetime="2026">2026</time></p>
+								<p class="entry-desc">Describe the research question, method, and principal result.</p>
+								<div class="entry-links"><span class="entry-link-wrap">[<a class="entry-link" href="#">Project Link</a>]</span></div>
+							</div>
+						</article>
+					</div>
+				</section>
 
-    <section aria-labelledby="research-projects">
-      <h2 id="research-projects">Research Projects</h2>
-      <div class="project-list">
-        <article class="project">
-          <div class="project-heading">
-            <h3><a href="#">Research Project</a></h3>
-            <time datetime="2026">2026</time>
-          </div>
-          <p>State the research question, your approach, and the main result in two or three sentences.</p>
-          <p class="meta"><a href="#">Paper</a> · <a href="#">Code</a></p>
-        </article>
-        <article class="project">
-          <div class="project-heading">
-            <h3><a href="#">Technical Project</a></h3>
-            <time datetime="2025">2025</time>
-          </div>
-          <p>Explain what you built, why it matters, and your contribution.</p>
-          <p class="meta"><a href="#">Repository</a></p>
-        </article>
-      </div>
-    </section>
+				<section class="project-group" aria-labelledby="technical-projects">
+					<h2 id="technical-projects">Technical Projects</h2>
+					<div class="entry-list">
+						<article class="entry-item">
+							<div class="entry-media entry-media--image"><img class="entry-image" src="/assets/images/project.svg" alt="Technical project preview" width="960" height="540"></div>
+							<div class="entry-content">
+								<p class="entry-title">Technical Project Title</p>
+								<p class="entry-time"><time datetime="2025">2025</time></p>
+								<p class="entry-desc">Describe what you built, your contribution, and the outcome.</p>
+							</div>
+						</article>
+					</div>
+				</section>
+			</div>
+		</section>
 
-    <footer>© 2026 Your Name</footer>
-  </main>
+		<footer id="footer" class="site-footer"><p class="footer-back"><a href="../">&larr; Back to Home</a></p><div id="footer-content"></div></footer>
+	</main>
+	<script defer src="/assets/js/site.js"></script>
 </body>
+
 </html>

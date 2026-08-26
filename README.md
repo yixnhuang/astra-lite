@@ -1,43 +1,38 @@
 # Astra Lite
 
-Astra Lite is the compact multi-page edition of Astra: Adaptive Site Template for Research and Academia. It adds a projects archive to the academic homepage while keeping the implementation dependency-free.
+Astra Lite is the compact multi-page edition of Astra: Adaptive Site Template for Research and Academia. Its visual system, page layouts, navigation, and footer are derived directly from the Astra source website.
 
 ## Overview
 
-The template contains a homepage and one additional Projects page. It intentionally omits the full navigation system, news, writing, and secondary pages. Its colors follow the browser or operating-system theme automatically, with no theme control.
+The template contains the academic homepage plus Projects, News, and Contact pages. It retains the original responsive navigation template and follows the browser or operating-system color preference automatically without visitor-facing theme controls.
 
 ## Features
 
-- Responsive academic homepage
-- Projects index with reusable project entries
-- Automatic light and dark appearance
-- Shared static stylesheet
-- No framework, build step, or JavaScript
-
-## Requirements
-
-- A modern web browser
-- Any static web host
+- Home, Projects, News, and Contact pages
+- Original Astra navigation, layout, typography, spacing, colors, and responsive rules
+- Automatic light and Michigan-dark appearance
+- Shared footer and neutral SVG placeholders
+- No framework or build step
 
 ## Usage
 
-Clone the repository and replace the sample content.
-
 ```bash
-git clone https://github.com/yixnhuang/astra-lite.git
+git clone git@github.com:yixnhuang/astra-lite.git
 cd astra-lite
+python -m http.server 8000
 ```
 
-Serve the repository root with a local static server so directory links resolve consistently.
+Open `http://localhost:8000` and replace the sample content in the HTML files.
 
 ## Project Structure
 
 ```text
 .
 ├── assets/
-│   └── style.css
+├── contact/
+├── footer/
+├── news/
 ├── projects/
-│   └── index.html
 ├── index.html
 ├── LICENSE
 └── README.md
@@ -45,15 +40,11 @@ Serve the repository root with a local static server so directory links resolve 
 
 ## Customization
 
-Edit the sample biography and entries in the two HTML files. The appearance is intentionally fixed and follows `prefers-color-scheme`; the template does not provide a navigation bar or user-selectable themes.
-
-## Deployment
-
-Upload the repository as a static site. No build command is required.
+Replace the sample content and neutral SVG placeholders. Update the navigation template in `assets/js/site.js` and the shared footer in `footer/index.html`. Theme selection remains automatic.
 
 ## Project Status
 
-Maintained privately. Astra Lite is the compact multi-page edition of the Astra template family.
+Maintained privately. Astra Lite is the compact multi-page edition of Astra.
 
 ## License
 
