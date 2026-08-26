@@ -10,7 +10,7 @@ The template contains the academic homepage plus Projects, News, and Contact pag
 
 - Home, Projects, News, and Contact pages
 - Original Astra navigation, layout, typography, spacing, colors, and responsive rules
-- Automatic light and Michigan-dark appearance
+- Automatic light and dark appearance
 - Shared footer and neutral SVG placeholders
 - No framework or build step
 
