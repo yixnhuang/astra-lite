@@ -90,7 +90,6 @@
                   </div>
                   <div class="site-nav-group">
                     <p>Elsewhere</p>
-                    <a href="https://scholar.google.com/" target="_blank" rel="me noopener noreferrer">Google Scholar</a>
                     <a href="https://github.com/" target="_blank" rel="me noopener noreferrer">GitHub</a>
                     <a href="https://www.linkedin.com/" target="_blank" rel="me noopener noreferrer">LinkedIn</a>
                   </div>
