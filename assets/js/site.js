@@ -10,10 +10,6 @@
     header.dataset.siteHeader = "";
     header.innerHTML = `
       <nav class="site-navigation" aria-label="Primary navigation">
-        <a class="site-logo" href="/" aria-label="Your Name, homepage">
-          <img class="site-logo-art site-logo-art--light" src="/assets/images/logo-black.svg" alt="" width="1024" height="1024">
-          <img class="site-logo-art site-logo-art--dark" src="/assets/images/logo-white.svg" alt="" width="1024" height="1024">
-        </a>
 
         <button class="site-menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav-menu">
           <span>Menu</span>
