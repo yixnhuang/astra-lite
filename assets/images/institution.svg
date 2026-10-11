@@ -26,7 +26,7 @@
        rx 54 on a 600 box shown at 112px reads as about 10px. -->
   <rect class="surface" width="600" height="600" rx="54"/>
 
-  <!-- Mark bounds x 92..508 and y 109..491: 416 x 382, centred on 300,300.
+  <!-- Mark bounds x 92..508 and y 109..491: 416 x 382, centered on 300,300.
        Roof and architrave are ONE path. Drawn as two shapes they left a pale
        seam along the join and a nick at each end of the roofline. -->
   <g class="mark">

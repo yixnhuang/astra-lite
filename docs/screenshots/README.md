@@ -23,7 +23,7 @@ has generous gutters between sections and almost none between words: a vertical
 seam cuts through text and reads as a rendering fault.
 
 `capture.py` measures both captures, finds every gap between sections, and puts
-the seam and the bottom edge at the **centre** of one. The centre is the point —
+the seam and the bottom edge at the **center** of one. The center is the point —
 an edge parked at the end of a gap sits closer to one paragraph than the other
 and reads as misaligned, while the midpoint reads as deliberate. Wider gaps are
 preferred over merely nearer ones, because a 22px gap leaves 11px of air on each
@@ -70,5 +70,5 @@ back to DejaVu Sans and misrepresent the typography.
   <edit name="family" mode="assign" binding="strong"><string>Inter</string></edit></match>
 ```
 
-Regenerate after any change to layout, typography, colour or the sample content,
+Regenerate after any change to layout, typography, color or the sample content,
 and commit the new images in the same commit as the change that caused them.

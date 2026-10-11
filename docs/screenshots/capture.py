@@ -2,7 +2,7 @@
 """Regenerate the README images for this template.
 
 Serves the repository root over HTTP, loads the homepage in Chromium under both
-colour-scheme preferences, and writes:
+color-scheme preferences, and writes:
 
     docs/screenshots/home-light.png   full homepage, light appearance
     docs/screenshots/home-dark.png    full homepage, dark appearance
@@ -11,7 +11,7 @@ colour-scheme preferences, and writes:
 The hero is not a crop. It is `hero.template.html` rendered in the same browser:
 one continuous page inside a window, light above a horizontal seam and dark
 below it. The seam position and the window height are chosen by measuring the
-captures: both are placed at the *centre* of a gap between sections, so the seam
+captures: both are placed at the *center* of a gap between sections, so the seam
 sits the same distance from the paragraph above it as from the paragraph below,
 and the bottom edge cuts the page in a gap rather than through a line. Change
 the template to change the design; the numbers look after themselves.
@@ -60,7 +60,7 @@ PAGE_CSS_W = 1440              # capture viewport width
 SEAM_TARGET, SEAM_LO, SEAM_HI = 0.55, 0.34, 0.74
 INK_THRESHOLD = 0.4          # a row this uniform is background, not content
 MIN_GUTTER = 6               # window px; shorter blank runs are line spacing
-WIDTH_BONUS = 1.5            # how far it is worth travelling for a roomier gap
+WIDTH_BONUS = 1.5            # how far it is worth traveling for a roomier gap
 ZOOM = WIN_W / PAGE_CSS_W
 
 # Per-repository copy for the hero. Edit these, not the rendered PNG.
@@ -88,7 +88,7 @@ def _ink_rows(pixels: np.ndarray, height: int) -> np.ndarray:
     """One flag per window row: True where the captured page has content there.
 
     A row of the page is blank when every pixel across it is the background
-    colour, so its standard deviation is essentially zero.
+    color, so its standard deviation is essentially zero.
     """
     rows = np.empty(height + 1, dtype=bool)
     for y in range(height + 1):
@@ -113,16 +113,16 @@ def _gutters(ink: np.ndarray, min_length: int = MIN_GUTTER) -> list[tuple[int, i
     return runs
 
 
-def _pick_gutter_centre(gutters, target, lo, hi):
-    """Centre of the best gutter near `target`, or None if none is in range.
+def _pick_gutter_center(gutters, target, lo, hi):
+    """Center of the best gutter near `target`, or None if none is in range.
 
-    The centre matters, not merely a blank row: an edge parked at the end of a
+    The center matters, not merely a blank row: an edge parked at the end of a
     gap sits closer to one paragraph than the other and reads as misaligned.
     Halfway between the text above and the text below reads as deliberate.
 
     Width matters too. A 22px gap gives an edge 11px of air on each side; a 7px
     gap gives 3px and looks like the line is touching the text. So a roomier gap
-    is worth travelling for, which is what WIDTH_BONUS buys.
+    is worth traveling for, which is what WIDTH_BONUS buys.
     """
     usable = [(a, b) for a, b in gutters if lo <= (a + b) / 2 <= hi]
     if not usable:
@@ -139,7 +139,7 @@ def plan_window() -> tuple[int, int]:
 
     Two edges have to land in the page's own whitespace: the seam, where the
     light capture meets the dark one, and the bottom of the window, where the
-    page is cut off. Both are placed at the *centre* of a gutter, so the seam is
+    page is cut off. Both are placed at the *center* of a gutter, so the seam is
     equidistant from the paragraph above and the paragraph below.
 
     The window always starts at the top of the page — that edge is already
@@ -156,8 +156,8 @@ def plan_window() -> tuple[int, int]:
     ink = _ink_rows(light, hi_h) | _ink_rows(dark, hi_h)
     gutters = _gutters(ink)
 
-    height = _pick_gutter_centre(gutters, nominal, lo_h, hi_h) or round(nominal)
-    seam = _pick_gutter_centre(
+    height = _pick_gutter_center(gutters, nominal, lo_h, hi_h) or round(nominal)
+    seam = _pick_gutter_center(
         gutters, height * SEAM_TARGET, height * SEAM_LO, height * SEAM_HI
     ) or round(height * SEAM_TARGET)
     return height, seam

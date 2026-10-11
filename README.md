@@ -20,7 +20,7 @@ configuration file and nothing to keep up to date.
 ## Editions
 
 Astra comes in three sizes. They share one visual system — the same type scale,
-spacing, colours and responsive rules — so a site can move up an edition without
+spacing, colors and responsive rules — so a site can move up an edition without
 being redesigned.
 
 | | [Mini](https://github.com/yixnhuang/astra-mini) | **Lite** | [Full](https://github.com/yixnhuang/astra-full) |
@@ -42,7 +42,7 @@ visitor-facing theme control. Move down to Mini when one page is enough.
 
 Rendered from this repository with no content changes: Chromium, 1440 px
 viewport, `deviceScaleFactor` 2, full page. Both captures use the same
-unmodified sample content; only the colour-scheme preference differs.
+unmodified sample content; only the color-scheme preference differs.
 
 | Light | Dark |
 |---|---|
@@ -56,7 +56,7 @@ position. See [Regenerating the images](#regenerating-the-images).
 
 | Page | Path | What it is |
 |---|---|---|
-| Home | `index.html` | Profile, education, experience, honours, selected projects |
+| Home | `index.html` | Profile, education, experience, honors, selected projects |
 | Projects | `projects/` | Grouped project index |
 | News | `news/` | Dated entries, newest first |
 | Contact | `contact/` | Addresses and academic profiles |
@@ -94,8 +94,8 @@ rewrite those paths to be relative.
 | Page content | The `index.html` of that directory |
 | Global navigation | `assets/js/site.js` |
 | Footer, on every page at once | `footer/index.html` |
-| Colours, type, spacing | `assets/css/style.css` |
-| Breakpoint behaviour | `assets/css/responsive.css` |
+| Colors, type, spacing | `assets/css/style.css` |
+| Breakpoint behavior | `assets/css/responsive.css` |
 | Portrait, institution logos, project thumbnails | `assets/images/*.svg` |
 
 The three SVGs in `assets/images/` are neutral placeholders — a portrait, an
@@ -110,7 +110,7 @@ visitor's own setting decides, and there is nothing to click. `assets/js/theme.j
 is twelve lines and listens for changes, so switching the OS to dark mode
 switches the page immediately.
 
-Colours live as custom properties on `:root` in `style.css`, with the dark set
+Colors live as custom properties on `:root` in `style.css`, with the dark set
 redefined under `:root[data-theme="dark"]`. Changing the accent means changing
 two values, not hunting through the file.
 
@@ -125,9 +125,9 @@ two values, not hunting through the file.
 │   └── footer.js           the loader
 ├── assets/
 │   ├── css/style.css       the visual system
-│   ├── css/responsive.css  breakpoint behaviour
+│   ├── css/responsive.css  breakpoint behavior
 │   ├── js/site.js          navigation
-│   ├── js/theme.js         follows the OS colour scheme
+│   ├── js/theme.js         follows the OS color scheme
 │   └── images/*.svg        neutral placeholders
 ├── docs/
 │   ├── screenshots/        the README images and capture.py
@@ -144,11 +144,11 @@ playwright install chromium
 python docs/screenshots/capture.py
 ```
 
-The script serves the repository, loads the homepage under both colour-scheme
+The script serves the repository, loads the homepage under both color-scheme
 preferences, and writes `home-light.png`, `home-dark.png` and `hero.png`. The
 banner's seam position and window height are not hard-coded: the script measures
 the captured page, finds the blank gaps between sections, and puts both the seam
-and the bottom edge at the **centre** of a gap, so neither ever cuts through a
+and the bottom edge at the **center** of a gap, so neither ever cuts through a
 line of text. Change the content and the numbers follow.
 
 See [`docs/screenshots/README.md`](docs/screenshots/README.md) for the details
@@ -173,7 +173,7 @@ In short:
   `Built with Astra Template`; that line, and the notices in the source files,
   stay.
 - **You must** release any template you derive from Astra under the same
-  licence.
+  license.
 - **You may not** use it commercially: no selling it, no template marketplace,
   no paid web-design service built on it.
 

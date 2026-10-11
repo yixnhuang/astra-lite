@@ -25,9 +25,9 @@
        CSS, so rounding here would show through as a lighter fringe. -->
   <rect class="surface" width="600" height="800"/>
 
-  <!-- Mark bounds x 126..474 and y 194..606: 348 x 412, centred on 300,400.
+  <!-- Mark bounds x 126..474 and y 194..606: 348 x 412, centered on 300,400.
        The bust is contained rather than bled off the bottom edge, so that all
-       three placeholders are centred marks and read as one set. It is wider
+       three placeholders are centered marks and read as one set. It is wider
        than it is tall so it reads as shoulders rather than as a dome. -->
   <g class="mark">
     <circle cx="300" cy="284" r="90"/>

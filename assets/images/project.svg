@@ -24,7 +24,7 @@
   <!-- Corners are intentionally square: the template applies border-radius in CSS. -->
   <rect class="surface" width="960" height="540"/>
 
-  <!-- Mark bounds x 241..719 and y 135..405: 478 x 270, centred on 480,270.
+  <!-- Mark bounds x 241..719 and y 135..405: 478 x 270, centered on 480,270.
        Sized so that it fills about half its tile, matching the other two
        placeholders — they have to read as one set. -->
   <g class="mark">
